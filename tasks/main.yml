@@ -1,0 +1,9 @@
+---
+# tasks file for webserver
+
+- name: Install Packages
+  yum:
+    name: ['git', 'epel-release', 'nginx']
+    state: latest
+  become: true
+  become_user: root
